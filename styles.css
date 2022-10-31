@@ -1,0 +1,74 @@
+#simwindow {
+    width: 100%;
+    height: 500px;
+    background-image: url('./background.svg');
+    background-position: 50% 50%;
+    background-size: 50px 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.componentContainerOuter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.componentContainerInner {
+    position: relative;
+}
+
+.componentImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.labelTextWrapper {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    height: 0px;
+}
+
+.labelText {
+    white-space: nowrap;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.pointerEvNone {
+    pointer-events: none;
+}
+
+#controls {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 70px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#details {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.control-wrapper {
+    margin-right: auto;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.control {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}

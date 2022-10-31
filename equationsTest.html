@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script src="equations.js"></script>
+        <script>
+            let a = new Variable("a");
+            let b = new Variable("b");
+            let c = a.add(b.sub(a));
+
+            console.log(a.add(b.sub(a.mul(-2))));
+        </script>
+    </body>
+</html>

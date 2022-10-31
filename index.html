@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <template id="componentTemplate">
+        <div class="componentContainerOuter">
+            <div class="componentContainerInner">
+                <img src="resistor.svg" class="componentImg" />
+                <div class="labelTextWrapper">
+                    <div class="labelText"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="connectionTemplate">
+        <div class="componentContainerOuter pointerEvNone">
+            <div class="componentContainerInner">
+                <svg class="componentImg" style="transform: translate(-50%, -50%);" width="7mm" height="7mm"
+                    viewBox="0 0 7 7" version="1.1" id="svg1107" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+                    sodipodi:docname="drawing.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1"
+                        transform="translate(-101.64907,-145)">
+                        <circle
+                            style="fill:#000000;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000;fill-opacity:0"
+                            id="path933" cx="105.14907" cy="148.5" r="2.75" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </template>
+    <template id="optionTemplate">
+        <div>
+            <span class="optionName"></span>: <input style="display: inline-block;" type="number"
+                placeholder="(to be calculated)" />
+        </div>
+    </template>
+    <div id="simContainer">
+        <div id="simWindow">
+        </div>
+        <div id="details">
+            <p>Current tool: <span id="details_currentTool"></span></p>
+            <div id="selectedInfo">
+                <p>Component type: <span id="selecteddetails_component"></span></p>
+                <p>Options / info:</p>
+                <div id="selectedOptions">
+
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <div class="control-wrapper" id="zoomInButton"><span class="material-icons control">zoom_in</span></div>
+            <div class="control-wrapper" id="zoomOutButton"><span class="material-icons control">zoom_out</span></div>
+            <div class="control-wrapper" onclick="switchTool('pan')"><span
+                    class="material-icons control">pan_tool</span></div>
+            <div class="control-wrapper" onclick="switchTool('select')"><span
+                    class="material-icons control">mouse</span></div>
+            <div class="control-wrapper" onclick="switchTool('wire')"><span
+                    class="material-icons control">arrow_right_alt</span></div>
+            <div class="control-wrapper" onclick="addComponent('resistor')"><img src="resistor.svg"
+                    style="width: 40px;" /></div>
+            <div class="control-wrapper" onclick="addComponent('cell')"><img src="cell.svg" style="width: 40px;" />
+            </div>
+            <div class="control-wrapper" onclick="addComponent('ammeter')"><img src="ammeter.svg"
+                    style="width: 40px;" /></div>
+            <div class="control-wrapper" onclick="addComponent('voltmeter')"><img src="voltmeter.svg"
+                    style="width: 40px;" /></div>
+            <div class="control-wrapper" onclick="deleteSelectedComponent()"><span
+                    class="material-icons control">delete</span></div>
+            <div class="control-wrapper" onclick="rotateSelectedComponent()"><span
+                    class="material-icons control">rotate_right</span></div>
+            <div class="control-wrapper" onclick="switchTool('solve')"><span class="material-icons control">start</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="equations.js"></script>
+    <script src="./Vector2.js"></script>
+    <script src="./colors.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
